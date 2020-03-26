@@ -149,7 +149,7 @@ img {
   background: #ffffff;
 }
 
-#solar::before {
+#solarize::before {
   background: var(--bg-solar);
 }
 
