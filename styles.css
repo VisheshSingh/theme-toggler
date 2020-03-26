@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
   color: var(--text);
-  background-color: var(--bg);
+  background: var(--bg);
   transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
@@ -21,7 +21,7 @@ a {
 .navbar {
   height: 70px;
   width: 100%;
-  background-color: linear-gradient(to right, var(--gray1), var(--gray3));
+  background: var(--bg-nav);
   color: var(--text);
 }
 
@@ -34,23 +34,28 @@ a {
 
 header {
   padding: 1rem;
-  /* background-color: var(--bg-nav); */
+  background: var(--bg-nav);
   padding-bottom: 3.5rem;
   margin-bottom: 1rem;
   text-align: center;
   clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
 }
-
 main {
   min-height: 1000px;
   padding: 2rem;
+}
+
+img {
+  margin: 2em 0 0;
+  width: 180px;
+  height: 180px;
 }
 
 .dropdown {
   position: absolute;
   z-index: 2;
   width: 500px;
-  background-color: blue;
+  background: var(--bg-dropdown);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   border-top: 2px solid var(--border-color);
@@ -64,10 +69,10 @@ main {
   height: 3rem;
   margin-top: 2rem;
   padding: 0.5rem;
-  box-shadow: 0 0.175rem 0.5rem rgba(2, 8, 20, 0.1);
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
   list-style-type: none;
 
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .has-dropdown:focus-within .dropdown {
@@ -84,11 +89,11 @@ main {
 }
 
 .dropdown-item a::before {
-  content: '';
+  content: ' ';
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  border: 2px solid #fff;
+  border: 2px solid var(--border-color);
   border-radius: 50%;
   vertical-align: middle;
   margin-right: 0.5rem;
